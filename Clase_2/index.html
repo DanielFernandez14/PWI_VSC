@@ -1,11 +1,131 @@
+<!-- esto es para hacer comentarios 
+    para dejar notas a nosotros o a quien sea
+
+    Para subir cambios a GitHub
+
+    git init
+    git add.
+    git commit -M "mensaje"
+    git push -u origin main
+
+    tambien puede subirse desde el Source Control
+-->
+
+<!-- Que es HTML: Hyper Text Markup Languaje
+    usa marcas y etiquetas, todo lo que contiene la pagina -->
+<!--Etiquetas: -> <nombre>
+    dos tipos de etiquetas: 
+    - apertura y cierre <nombre> aca el contenido </nombre>
+    - cierre en si mismo <nombre />
+-->
+
+<!-- atajos "! + Enter o Tabulador" -> estructura inicial del HTML
+            "Ctrl + S"
+            "Ctrl + z" borra lo que hicimos 
+    -->
+<!--
+
+Head - 
+- Meta: metadatos <meta/> cierra en si misma - UTF-8 -> usa caracteres humanos
+- Scale es para que sea la escala original
+- Title (Titulo de la pestaña)
+- Lang: Lenguaje "en" "es", screen readers son lectores de pantalla, le da el acento cuando lo lee. Google Readers extension -> accesibilidad, cualquier persona con distintas capacidades pueden ver el sitio.
+Seo -> motores de busqueda -> buenas practicas.
+Usar keyword es penado. 
+-->
+
+<!--
+
+Body: toda la info/contenido que se ve en el sitio web
+
+-->
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clase_2_html</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!--
     
+    Etiquetas semanticas: son etiquetas que tienen un significado en el mundo real. Son aquillas que usamos que se ven en la pagina web. Son lo que queremos mostrar.
+    
+    - <h1></h1> a <h6></h6> -> H1 mas importante y uno solo, no hace falta que hayan 6 titulos/subtitulos
+    - <p> no es un texto es un parrafo </p>
+    - <br> salto en linea. punto y a parte. Se usa dentro de un mismo parrafo, una sola vez. 
+    - Listas:
+            listas desorganizadas -> unorganize list <ul></ul>
+            listas organizadas -> organize list <ol></ol>
+            items de listas <li></li> : son los hijos de Ul y Ol.
+    -->
+
+
+<!-- Etiquetas funcionales: nos permiten hacer un tipo de funcionalidad
+    
+    <a></a> anchor - hipervinculos o links que generamos para que nos redirija. necesitan de un atributo HREF que van siempre dentro de la etiqueta de apertura.
+    <a href="../"> lo dirigimos a otra carpeta </a>
+    <a href="https://www.google.com.ar/" target="_blank">Google</a> nos redirecciona directamente en una nueva pestaña por el target="_blank"
+
+    </img> imagenes que agregamos, cierra en si misma, no tiene etiqueta de apertura o de cierre. Necesita " <img src="" alt=""> " SRC indica donde se encuentra la img a reproducir. ALT es por la accesibilidad, contribuye al SEO del sitio.
+
+    <iframe></iframe> 
+
+    <button></button> -> sirve mas que nada una vez que aprendemos JS
+                        no hay que usarlo para redireccionar a otra pagina. no es su funcion
+-->
+
+    <!-- Etiquetas Estructurales: Son esas etiquetas que llamamos "cajas genericas" son aquellas que no se ven en la pagina pero nos sirven para organizar el contenido del html y nos ayudan a darle estilos.
+
+    <div></div> -> tiene la capacidad que con CSS le podemos dar el espacio que queramos, generalmente trata de ocupar el 100% de la pantalla, con css se modifica todo.
+
+
+    <span></span> ocupa el espacio minimo que tiene su contenido. Generalmente se usa para englobar unas palabras y colorearlas en css.
+    
+    
+    
+    
+    
+    
+    -->
+
+
+    <h1>Clase 2 HTML Basico</h1>
+    <h2>Subtitulo</h2>
+    <h5>los tamaños ya vienen predeterminados para que lo podamos ver reflejado mientras armamos la pagina</h5>
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem dolore iure pariatur sequi quis reiciendis quibusdam ducimus optio quo unde doloremque inventore dicta quidem itaque, ut doloribus sed incidunt aspernatur! <br> Error asperiores at maiores laudantium, alias dicta, fugit quam deserunt soluta aliquid cupiditate sunt maxime vitae expedita qui voluptatum possimus, molestias minima?
+    </p>
+
+    <ul>
+        <li>items</li>
+        <li>items</li>
+        <li>items</li>
+    </ul>
+
+    <ol>
+        <li>items</li>
+        <li>items</li>
+        <li>items</li>
+    </ol>
+
+    <a href="https://www.google.com.ar/">Ir a Google</a>
+    <a href="indexH.Html" target="_blank"> Ir a Hoja Secundaria </a>
+    <a href="../Clase_1/index.html"> Va a la clase 1</a>
+    <a href="https://www.google.com.ar/" target="_blank">Google</a>
+
+    <img src="../Clase_2/imagenes/ojo.jpg" alt="es un ojo">    
+
+    <button> Click </button>
+
+    <div>
+        <h2>contenedor</h2>   
+        <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, pariatur, <span class="xd_span"> assumenda maiores suscipit ducimus molestias aliquid ea iste,</span> itaque accusantium ipsum porro quod laborum voluptatum sapiente dolor nisi unde voluptatem. </p>
+    </div>
+
+
 </body>
 </html>
