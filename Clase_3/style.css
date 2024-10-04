@@ -1,0 +1,115 @@
+/* Codigo en CSS */
+
+/* Selectores: 
+    selector{
+        propiedad: valor;
+        propiedad: color;
+        propiedad: fondo;
+    }
+
+    -Por etiqueta: escribo el nombre de la etiqueta
+
+Ejemplo:
+p {a todos los p que esten en los html vinculados se le aplican los cambios}
+
+*/
+
+/* Selector universal -> aplica a todas la etiquetas HTML
+    (*)
+*/
+
+body{
+    margin: 0;
+    background-color: lightgray;
+}
+
+h1{
+    background-color: rgb(100, 42, 73);
+    color: white;
+    /*height: 80%; no me lo aplica porque no tengo un valor definido fijo del alto del body*/
+    height: 10vh;/* el alto es el 80% del alto de la pantalla (browser) */
+    margin: 0; /* le saco el margin que tiene (tambien aplica para la propiedad padding) */
+}
+
+a{
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    box-sizing: border-box; /*defino si quiero que el tamaño definido de la etiqueta integre o no el padding*/
+    /* borde de todos los extremos: ancho del borde, tipo de borde, color del borde. Son propiedades que tienen que estar si o si para que se genere. */
+}
+
+p{
+    color: blueviolet;
+    margin: 80px;
+}
+/* -Etiqueta por clase 
+    escribo un .punto 
+
+*/
+.texto{
+    color: green;
+    background-color: rgb(40, 220, 200, 0.6);
+}
+
+/*por id -> escribo #nombreDelId*/
+
+#propiedadParticular{
+    color: red;
+}
+
+/* Algunas propiedades
+
+    color -> color de la tipograia
+    background-color ->color de fonde una etiqueta
+
+    modelo de caja:
+                padding-> relleno de la etiqueta, si ponemos un valor "padding: 30px;" se aplica a todos los bordes; si ponemos dos valores el primero es el alto y segundo ancho
+
+                border-> contorno/borde de la etiqueta
+
+                margin-> espacio entre etiquetas, el margen, la distancia que hay entre etiquetas
+*/
+
+
+
+
+/* para definir colores (colores primarios rojo verde azul)
+    -colores predefinidos por CSS
+    -RGBa -> que proporcion de rojo verde y azul tiene que mezclar, de 0 a 255.
+            la "a" es por la transparencia 0-1, se usa numeros decimales.
+    -hexadecimal -> generalmente lo usan en diseño, son 6 digitos, un par por cada color. Se escriben con un numeral adelante #
+    de la A a F y de 0 a 9. Se le puede poner transparencia
+*/
+
+button{
+    color: #ff6666;
+    background-color: #a0b9da;
+    border-radius: 3px;
+    padding: 30px;
+    margin: 0;
+}
+
+
+
+
+
+/* selectores compuestos -> Usa otras etiquetas como referencia. Si cambia el orden donde estan las etiquetas puede que falle o no funcione */
+
+/* Unidades de medida
+    -Porcentaje %: Va a tomar como 100% el tamaño del padre y desde ahi calculara el tamaño del porcentaje que le indiquemos (se fija la unidad de esa propiedad del padre y saca el porcentaje para el valor de el elemento hijo)
+    -pixeles: Unidad minima de una pantalla
+    -vh vw: Viewport Height el height es infinito / Viewport Width el ancho no es infinito-> indica un porcentaje del tamaño del alto o ancho de la pantalla
+
+*/
+.tarjeta{
+    width: 600px;
+    height: 500px;
+    background-color: coral;
+}
+#texto_tarjeta{
+    background-color: lightblue;
+    width: 50%;
+    height: 20%;
+}
