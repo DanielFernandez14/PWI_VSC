@@ -1,0 +1,58 @@
+/* Selectores compuestos -> Hacemos referencia a una etiqueta utilizando otra*/
+/* Simbolos de Selectores compuestos -> > + ~ (Alt + 126 cosito de la ñ) */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+body{
+    margin: 0;
+}
+/* en los fonts hay que poner sans serif al final, podemos usar el import sin etiqueta style o el link en el HTML directamente*/
+.titulo{
+    color: green;
+    font-family: "Montserrat Subrayada", sans-serif;
+    font-weight: bolder; /*es el peso tipografico, del 100 al 900 o bold - bolder - light - lighter ||no lleva unidad como % o px|| */
+    font-size: 50px; /* font size usa ||"Rem" usa el valor inicial que se define en el tamaño o usa el por defecto (16px) || - "Em" (16px) - "Px" */
+    text-align: center;
+    background-color: aquamarine;
+    width: fit-content; /* para que solo ocupe el ancho del contenido */
+    text-shadow: 2px 2px 6px red,
+                -2px 2px 5px blue;
+    /* valores positivos, cuanto se marca (derecha y abajo) || valores negativos, (izquierda y arriba) || El tercer valor es el difuminado*/
+}
+
+#parrafoUnico{
+    background-color: pink;
+    font-size: 1.2em;
+}
+.clase1{
+    background-color: darkblue;
+}
+
+/* este selector compuesto lo que nos permite es estirar al elemento que se encuentra despues del primero - por ejemplo, a cualquier boton que se encuentre despues del "p" dale este color */
+p + button{
+    color: white;
+}
+
+/* estila al elemento hermano de otro */
+ul~p{
+    background-color: chartreuse;
+    font-size: 1rem;
+    text-align: justify;
+}
+
+/* estila el o los elementos que se encuentran dentro del elemento de la izquierda */
+div>p{
+    color: darkgreen;
+}
+
+.seccion{
+    width: 50%;
+    background-color: cornflowerblue;
+}
+
+
+/* Sombras -> grosor color difuminado
+text-shadow: color, grosor, difuminado
+box-shadow:
+*/
