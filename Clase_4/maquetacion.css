@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+}
+.navegacion{
+    background-color: pink;
+
+}
+
+ul{
+    list-style: none;
+}
+
+.tarjetas{
+    width: 400px;
+    border: 2px solid violet;
+    margin: 10px;
+    background-color: lightblue;
+}
+.pie_de_pagina{
+    background-color: pink;
+}
+img{
+    width: 100px;
+}
+
+.cabecera{
+    text-align: center;
+    padding: 20px;
+    background-color: burlywood;
+}
+header{
+    border: 2px dashed, red;
+}
+.botonComprar{
+    padding: 5px;
+    background-color: blue;
+    color: white;
+}
+
+.tarjetas>p{
+    width: 80%;
+    padding: 20px;
+}
+/*  */

@@ -3,9 +3,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+*{
+    box-sizing: border-box; /* hace que se incluya/integre al tamaño final del elemento el padding y el border (dentro del area del contenido) || Ejemplo:En el box-1 tengo un width de 100px y un height de 120px si yo añado un padding de 5px y un border de 2px ahora la caja va a medir 114px de ancho por 134px de alto. Esto es porque le estoy sumando el padding y border. */
+}
 
 body{
     margin: 0;
+    
 }
 /* en los fonts hay que poner sans serif al final, podemos usar el import sin etiqueta style o el link en el HTML directamente*/
 .titulo{
@@ -49,10 +53,14 @@ div>p{
 .seccion{
     width: 50%;
     background-color: cornflowerblue;
+    box-shadow: 3px 3px gray;
 }
 
 
 /* Sombras -> grosor color difuminado
-text-shadow: color, grosor, difuminado
-box-shadow:
+text-shadow: color, grosor, difuminado;
+box-shadow: color, grosor, difuminado; -> va desde el contorno del borde de la caja
 */
+
+
+/* Landmarks - Maquetacion Web -> etiquetas HTML */
