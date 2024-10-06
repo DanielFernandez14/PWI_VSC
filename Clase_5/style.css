@@ -1,0 +1,63 @@
+.contenedor{
+    background-color: lightblue;
+    height: 1000px;
+    display: flex;
+    border: 2px solid blue;
+    width: 700px;
+    /*poniendo esto le decimos a  flexbox que los elementos hijos ya pueden usar flexbox. 
+    Sin display: flex, no habilitamos flexbox, hace que sean flexibles y ocupen solamente el espacio que necesitan. en linea o bloque*/
+
+    flex-direction: row; 
+    /*flex-direction row: (row-reverse lo da vuelta) se ponen en fila, horizontal. flex-direction column, se pone en columna, verticalmente y a la inversa con el Align-Items los ordena de forma horizontal*/
+
+    justify-content: center; 
+    /*space between lo lleva al principio y final y divide usando la misma distancia entre ellos, queda bien alineado y si ponemos mas tarjetas funciona igual*/
+    /*space-evenly: todas las tarjetas tienen el mismo espacio entre ellas, de inicio a final*/
+    /* space-around: genera una especie de margen entre la primera y la ultima al right y left y el resto de tarjetas los acomoda a la misma distancia, no podemos decidir que distancia quede entre el inicio y final */
+
+    /*alineacion de los hijos en forma horizontal (row- fila)*/
+
+    align-items: center;
+    /* alinea a los elementos hijos de manera vertical(row) 
+    Si el flex-direction: column, el align items los ordena de manera horizontal*/
+
+    flex-wrap: wrap;
+    /* prevalece el tamaño de los elementos hijos (wrap). si el ancho del contenedor padre es mas pequeño que el ancho total de todos mis elementos hijos, "empuja" a los que sobran hacia abajo */
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 30px; 
+    /* nos permite definir el espacio horizontal que queda entre los contenedores hijos si no esta el justify-content: space-between (justify-content: center; tiene que tener)*/
+
+    /*justify-content y align-items sirve para saber saber como acomodar los elementos */
+}
+
+
+.tarjeta{
+    width: 200px;
+    border: 2px solid black;
+    background-color: pink;
+    height: fit-content;
+}
+
+#dos{
+    background-color: lightgreen;
+    align-self: flex-end; /* asigna a un elemento hijo que se comporte distinto a sus hermanos(vertical=row || (horizontal=column) aplicar align-items pero de manera particular al elemento hijo */
+    /* justify-self tambien para que un elemento se comporte distinto: con el self es para un elemento en particular */
+}
+
+#tres{
+    margin-bottom: 50px;
+}
+
+img{
+    width: 100%;
+}
+
+h1{
+    background-color: red;
+    width: 120px;
+}
+
+/* Elementos en linea y en bloque: 
+-En bloque no permite que otros elementos se coloquen al lado. 
+-En Linea ocupa solamente el espacio que necesita, permitiendo que otros elementos puedan colocarse al lado */
