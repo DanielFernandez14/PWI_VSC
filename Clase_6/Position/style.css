@@ -1,0 +1,70 @@
+
+h1{
+    text-align: center;
+}
+
+.contenedor_padre{
+    background-color: deepskyblue;
+    width: 800px;
+    height: 900px;
+}
+
+.cubo{
+    background-color: brown;
+    width: 200px;
+    height: 200px;
+    border: 3px, solid, #8b0000;
+    color: white;
+    font-size: 20px;
+    box-sizing: border-box; /*para que se incluya padding y border al contenedor*/
+}
+
+.static{
+    position: static;
+    margin-left: 80px;
+}
+
+.relative{
+    background-color: darkgreen;
+    position: relative;
+    left: 200px; /*se le agrega a la izq*/
+    bottom: 100px; /*100px de arriba a abajo*/
+    z-index: 7;
+}
+
+.absolute{
+    background-color: gold;
+    color: black;
+    position: absolute;/**/
+    top: 300px;
+    left: 100px;
+}
+
+.fixed{
+    position: fixed;
+    top: 100px;
+    right: 0px;
+    z-index: 5;
+}
+
+.sticky{
+    background-color: fuchsia;
+    position: sticky;
+    left: 300px;
+    top: 0;
+    z-index: 8; 
+}
+
+/* Posision por defecto es Static -> (permite que se ubique) no es necesaria colocarla */
+
+/* El position relative -> nos permite cambiar la ubicacion actual dandole coordenadas. Trabaja en conjunto con 4 propiedades -> Top - Bottom - Left y Right || Da la posibilidad de mover al elemento a un lugar especifico, puede ser sobre otros elementos, se puede superponer sobre otros. Por mas que el contenedor padre tenga 800px o 500px el position relative le da una posision exacta al elemento || Se le puede dar cualquier unidad de medida || Inicia de su posision estandar, la toma como origen y la deja reservada como origen del relative */ 
+
+/* Absolut -> Nos permite mover el elemento, decir donde se va a posisionar - No deja el espacio vacio de origen, saca el elemento "del plano" || Toma como inicio/referencia (origen) al primer elemento padre con position relative, si no hay usa el body como elemento padre (izquierda arriba inicio de body).
+Si el contenedor Padre es mas chico, por ejemplo en vez de 800px, es de 500px, va a quedarse "pegado" a ese contenedor y se mueve dependiendo de su tamaño si es que tiene un position: relative; sino no. */
+
+/* Fixed: como el absolute, lo saca del plano || Le damos posisionamiento (toma de referencia SIEMPRE al Body) y queda fijo en ese lugar aunque se mueva la pantalla, se achique o lo que sea, se sigue viendo igual y pasa por encima de los demas elementos*/
+
+
+/* Sticky -> Es una mezcla entre el relative y fixed pero no lo saca del plano. || Si esta inmovil, se queda en la posicion en la que se encuentra ocupando un espacio, pero al hacer scroll se vuelve fijo (fixed), tomando como referencia de las coordenadas a su contenedos padre. Vive solamente hasta donde termina el padre. */
+
+/* z-index -> propiedad que indica el orden en que se solapan los elementos (funciona con cualquier elemento que tenga un position distinto a static, por defecto no funciona). Valores -> toma numeros enteros sin unidad, cuanto mas grande mas por encima esta */

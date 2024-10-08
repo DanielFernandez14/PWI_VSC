@@ -1,0 +1,29 @@
+.tarjeta{
+    width: 200px;
+    border: 2px solid purple;
+    background-color: salmon;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+img{
+    width: 100%;
+}
+section{
+    background-color: cornflowerblue;
+    width: 800px;
+    height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.titulo-tarjeta{
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    color: rgb(0, 0, 0);
+    background-color: lightcyan;
+    width: 50%;
+}
