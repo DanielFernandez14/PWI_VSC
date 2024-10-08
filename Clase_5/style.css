@@ -13,7 +13,7 @@
     justify-content: center; 
     /*space between lo lleva al principio y final y divide usando la misma distancia entre ellos, queda bien alineado y si ponemos mas tarjetas funciona igual*/
     /*space-evenly: todas las tarjetas tienen el mismo espacio entre ellas, de inicio a final*/
-    /* space-around: genera una especie de margen entre la primera y la ultima al right y left y el resto de tarjetas los acomoda a la misma distancia, no podemos decidir que distancia quede entre el inicio y final */
+    /*space-around: genera una especie de margen entre la primera y la ultima al right y left y el resto de tarjetas los acomoda a la misma distancia, no podemos decidir que distancia quede entre el inicio y final*/
 
     /*alineacion de los hijos en forma horizontal (row- fila)*/
 
