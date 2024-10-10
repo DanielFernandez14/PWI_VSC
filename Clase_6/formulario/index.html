@@ -7,6 +7,102 @@
     <link rel="stylesheet" href="form.css">
 </head>
 <body>
+    <h1>Formularios</h1>
+
+    <form action="dondeva" method="post">
+
+        <label for="nombre">Nombre Completo</label>
+        <input type="text" id="nombre" placeholder="Daniel Fernandez" class="inputTexto" required>
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="ejemplo@gmail.com" class="inputTexto" required>
+
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" placeholder="Su Contraseña" class="inputTexto" required>
+
+        <label for="checkbox">Casilla</label>
+        <input type="checkbox" id="checkbox">
+
+
+        <div>
+            <label for="">Ingrese los cursos:
+            </label>
+
+            <label for="hyc">HTML y CSS</label>
+            <input type="checkbox" name="HyC"id="hyc" value="HyC">
+
+            <label for="bot">Bootstrap</label>
+            <input type="checkbox" name="Bootstrap"id="bot" value="Bootstrap">
+
+            <label for="React">React</label>
+            <input type="checkbox" name="React" id="React" value="React">
+        </div>
+
+        <div>
+            <label for="Turno">Ingrese el Turno: </label>
+
+            <label for="Mañana">Mañana</label>
+            <input type="radio" name="Turno" id="Mañana" value="Mañana">
+            
+            <label for="Tarde">Tarde</label>
+            <input type="radio" name="Turno" id="Tarde" value="Tarde">
+        </div>
+
+        <div>
+            <label for="ta">Comentarios</label>
+            <textarea for="textarea" name="textarea" id="ta" placeholder="Puede adjuntar comentarios, 40 caracteres maximo" maxlength="40"></textarea>
+        </div>
+        <div>
+            <label for="pais">Pais de Origen</label>
+            <select name="paisOrigen" id="pais">
+                <option value="Argentina">Argentina</option>
+                <option value="Bolivia">Bolivia</option>
+                <option value="Colombia">Colombia</option>
+                <option value="Venezuela">Venezuela</option>
+            </select>
+        </div>
     
+
+
+
+            <input type="submit" value="Enviar" id="boton-enviar">
+            <!-- Se recomienda usar el input submit que se creo especificamente para esto (enviar el formulario) || Se puede usar un button  -->
+    </form>
+    <hr>
 </body>
 </html>
+
+
+<!-- img br input hr -->
+<!-- input: 
+
+- Atributo value -> valor a enviar del formulario, donde el usuario tiene que redactar no hay que poner value porque sino aparece en el input como predefinido y aunque el usuario lo cambie se enviará el value que le dimos nosotros. El label es para el usuario lo que tiene que completar, el value es el backend. Usar en checkbox o radio.
+
+- Atributo name -> "titulo" con el que se manda ese valor, la referencia (lo que recibimos nosotros)
+Para que se pueda selecionar un solo checkbox o radio hay que poner el mismo atributo name entre los que seleccionemos, con el id lo vinculamos al form del input.
+-->
+<!-- Label | For (para que lo guie cuando apreta la palabra) usuario
+    Value | Name (backend)-->
+<!-- Atributo Placeholder: no se usa como mensaje, solo como ejemplo, ponemos un poco mas de info -->
+
+<!-- Atributo Action: va en el Form | indica a donde lo tiene que enviar, el backend te da la direccion de envio, sino -->
+<!-- Atributo Method: (peticiones/pedidos de un sitio web: traer informacion, enviar, trae documentos, eliminar documentos). 
+-Protocolo que tiene las reglas de como hay que pedir o enviar cosas HTTP|HTTPS (es mas seguro) 
+Necesita para que se organice 5 metodos - verbos HTTP 
+- GET: para recibir información, no te envio nada, solo cargame la pagina o documentacion de la pagina.
+- POST: envio informacion (crear nueva data) -->
+
+<!-- Select: Etiqueta que ofrece un menu desplegable de opciones. Para definir las
+opciones se usa la etiqueta <option value =”hola”>hola</opction> -->
+<!-- Atributos Validadores se ponen en los Inputs
+-Required: Este validador indica que el campo en el cual se
+encuentre debe completarse de forma obligatoria.
+-Min-MaxLenght: Este validador especifica un limite minimo o
+maximo de caracteres permitido en el campo. 
+-Pattern: Este validador restringe el patron de datos
+permitidos en el campo en el que se encuentre.
+-Disabled: Este validador deshabilita dicho campo, lo que hace
+que el usuario no pueda modificarlo o completarlo. Puede usarse para ir habilitando de a poco y que complete en orden los campos (con js).
+-Readonly: Este validador especifica que dicho campo solo sera
+de lectura, haciendo al igual que el validado disabled
+el usuario no pueda modificar o completar.-->

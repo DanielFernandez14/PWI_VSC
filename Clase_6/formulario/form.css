@@ -1,0 +1,26 @@
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+form{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 20px;
+    background-color: lightseagreen;
+    padding: 50px;
+}
+#boton-enviar{
+    grid-column: 1/3;
+    width: fit-content;
+    justify-self: center;
+    padding: 20px;
+}
+.inputTexto{
+    width: 200px;
+    padding: 10px 2px;
+    border-radius: 10px;
+}
+textarea{
+    width: 100%;
+    height: 100px;
+}
