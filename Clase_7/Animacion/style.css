@@ -1,0 +1,88 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.contenedor_padre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.cubo{
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(0, 0, 157);
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.translate{  
+    transition: all 3s;
+}
+
+.translate:active{
+    transform: translate(55px, -19px);
+    background-color: brown;
+}
+
+/* Translate --> puede transladarlo en eje x, y, z (dos o tres dimensiones) || 
+Primer valor corresponde al eje X y el segundo al eje Y || 
+Usamos medidas de distancia, px, vh vw, porcentajes, etc. Con un valor positivo en eje X se mueve a la derecha, valor negativo a la izquierda. Valor positivo eje Y se mueve hacia abajo, valor negativo se mueve hacia arriba */
+/*Lo podemos usar en pseudoclase*/
+
+/*
+Transition --> transicion de un estado a otro, se aplica a cualquier propiedad. 
+transition: propiedad duracion (en que tiempo en segundos "s")
+*/
+
+.rotate{
+    transition: transform 5s;
+}
+.rotate:active{
+    transform: rotate(360deg);
+    
+}
+/* 
+Rotate (x,y), rotate(x) | rotate(y);
+Usa grados para la rotacion --> deg(degree)
+Valores positivos gira hacia la derecha | Valores negativos gira hacia la izquierda.
+-Para poder ver todos los pasos (por ejemplo que gire 360 grados hacia la derecha y despues progresivo de la vuelta hacia el lado contrario lo ponemos donde no esta la pseudoclase, en la class directamente) hay que poner un transition para que vaya de forma progresiva
+*/
+
+
+.scale{
+    background-color: gold;
+    transition: all 1s;
+}
+.scale:hover{
+    transform: scale(0.5);   
+}
+
+/*
+Scale lo hace de forma proporcional |
+Va con numeros enteros o con decimales |
+En negativo la flashea
+*/
+
+
+.skew{
+    transform: skew(20deg, 15deg)
+}
+/*
+Skew --> estira los elementos eje x e y. 
+Usa grados (deg). 
+Como que deforma la imagen, se pueden animar desde pseudoclases
+*/
+
+.combinado:hover{
+    background-color: pink;
+    transform: translateX(100px) rotate(45deg);
+    transition: all 3s;
+}
+
+
+/*
+Si usamos "transition: all 2s;" por ejemplo, va a hacer que todo lo que haga lo haga de forma progresiva 
+*/
+

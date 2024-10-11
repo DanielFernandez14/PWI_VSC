@@ -21,7 +21,6 @@ nav{
     color: #333333;
     display: flex;
     gap: 10px;
-    
 }
 #hamb-check{
     display: none;
