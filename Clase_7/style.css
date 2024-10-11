@@ -1,0 +1,160 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #333333;
+    font-family: 'Courier New', Courier, monospace;
+    color: whitesmoke;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+    align-items: center;
+}
+.menu{
+    list-style-type: none;
+    color: #333333;
+    display: flex;
+    gap: 10px;
+    
+}
+#hamb-check{
+    display: none;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+section{
+    display: grid;
+    grid-template-columns: repeat(2,500px);
+    row-gap: 20px;
+}
+.tarjeta{
+    width: 300px;
+    border: 5px solid lightblue;
+    background-color: darkslateblue;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-self: center;
+    position: relative;
+}
+.titulo_tarjeta{
+    position: absolute;
+    top: 10%;
+    right: 20px;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: antiquewhite;
+}
+.tarjeta>img{
+    width: 100%;
+    border: 4px solid red;
+}
+.boton{
+    padding: 10px;
+    background-color: brown;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 5px;
+    border-radius: 8px;
+}
+.boton:active{ /*pseudoclase*/
+    background-color: darkblue;
+    border: 2px dashed black;
+}
+.submenu{
+    list-style-type: none;
+    background-color: pink;
+    color: black;
+    display: none;
+    position: absolute;
+    top: 40px;
+}
+.item_menu{
+    position: relative;
+    cursor: pointer;
+}
+.hamburguesa{
+    width:  36px;
+    display: none;
+}
+li:hover{
+    background-color: antiquewhite;
+    cursor: pointer;
+}
+
+footer{
+    background-color: gold;
+    color: rgb(47, 42, 42);
+    padding: 20px;
+}
+
+@media (max-width: 800px){
+    body{
+        background-color: coral;
+    }
+    section{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+    }
+}
+@media(max-width: 500px){
+    
+    section{grid-template-columns:1fr;
+}
+    /*cuando pase el mouse por encima del menu hamburguesa(pseudoclase), mostrar el menu(display)*/
+    .zona-menu{
+        width: 100%;;
+        display: none;
+    }
+    .menu{
+        flex-direction: column;
+    }
+    .hamburguesa{
+        display: block;
+    }
+    /*.hamburguesa:active +.menu{ siempre revisar bien la class
+        display: block;
+    }*/
+    #hamb-check:checked + .menu{
+        display: block;
+    }
+    
+}
+/*@media(breakpoint -> ancho de pantalla {
+    codigo que tiene que modificarse}  ||)*/
+
+/* 
+
+min-width -> Si nuestro modelo es Mobile First inicio con diseño en anchos de pantalla pequeños
+max-width -> si nuestro modelo inicia con un diseño en anchos de pantallas mas anchos (desktop)
+
+*/
+
+/*
+
+Anchos promedios de dispositivos: 
+Desktop -> 1200px - 1920px. (990px compus mas pequeñas)
+Tablets -> 768px - 800px promedio de ancho.
+Mobile (Celulares) -> 320px - 500px.
+
+*/
+
+/* pseudoclases -> 
+selector:pseudoclase{
+    propiedades
+}
+Es la posibilidad de cambios de estilos, pequeños detalles, sobre algunas interacciones del usuario
+hover: es cuando pasamos el mouse por arriba, aparece el contenido.
+active: es cuando pulsamos y se genera la interacion, pero unicamente mientras lo mantengamos pulsado.
+*/
