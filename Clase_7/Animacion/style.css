@@ -1,6 +1,15 @@
 *{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+/*animation @keyframe*/
+h1{
+    animation:mover 3s 4;
+    text-align: center;
+    width: 300px;
+    
+    
+}
+/* Transform y translate */
 .contenedor_padre{
     display: flex;
     flex-direction: column;
@@ -86,3 +95,35 @@ Como que deforma la imagen, se pueden animar desde pseudoclases
 Si usamos "transition: all 2s;" por ejemplo, va a hacer que todo lo que haga lo haga de forma progresiva 
 */
 
+
+
+@keyframes mover{
+    0%{
+        transform: translate(300px);
+    }
+    20%{
+        transform: translate(300px, 200px);
+        background-color: greenyellow;
+    }
+    35%{
+        transform: translate(100px) rotate(-50deg);
+        background-color: red;
+        border-radius: 50%;
+    }
+    100%{
+        background-color: aqua;
+        transform: scale(2);
+    }
+}
+
+/*
+Animaciones --> secuencias de acciones (pasos= ej: primero estas en una posicion, despues en otra y otra y otra, etc.)
+@keyframes son los pasos, la denominacion de la secuencia
+
+@keyframes nombre()
+
+Las animaciones tienen un inicio y final, en el medio se ponen los pasos que quiero que haga la animación. 
+Al iniciarla le indicamos cuanto dura y con eso se asigna en que tiempo ocurren los cambios
+
+Para ejecutarla: nombre de la animacion, cuanto va a durar y cuantas veces tiene que repetirlo.
+*/
