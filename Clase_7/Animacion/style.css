@@ -3,7 +3,7 @@
 }
 /*animation @keyframe*/
 h1{
-    animation:mover 3s 4;
+    animation:mover 3s 40;
     text-align: center;
     width: 300px;
     

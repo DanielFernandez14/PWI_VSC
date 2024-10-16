@@ -1,0 +1,15 @@
+.button-click{
+    color: white;
+    background-color: var(--bs-orange);
+}
+.subtitulo{
+    text-align: center !important;
+}
+div{
+    background-color: #33AF33;
+}
+.position-h3{
+    top: 27px;
+}
+
+/* en las propiedades con !important, toma la ultima propiedad que tiene dicho !important */
