@@ -8,8 +8,8 @@
 div{
     background-color: #33AF33;
 }
-.position-h3{
-    top: 27px;
+.h3{
+    position: absolute;
 }
 
 /* en las propiedades con !important, toma la ultima propiedad que tiene dicho !important */
