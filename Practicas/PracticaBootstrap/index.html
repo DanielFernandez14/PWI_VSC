@@ -9,46 +9,145 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-      </nav>
+<!--==============================================-->
+<!--Encabezado-->
+<!--==============================================-->
+
+<header class="container-fluid bg-primary d-flex justify-content-center">
+  <p class="text-light mb-0 p-2 fs-6">Contactanos (+54) 2966-449795</p>
+</header>
+
+<!--==============================================-->
+<!--Navbar-->
+<!--==============================================-->
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary p-3" id="menu" >
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <span class="text-primary fs-5 fw-bold">ExpertDan.</a></span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Equipo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contacto</a>
+        </li>
+        
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="email" placeholder="Correo Electronico" aria-label="email">
+        <button class="btn btn-primary btn-outline-success" type="button">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
 
 
+<!--==============================================-->
+<!--Slider-->
+<!--==============================================-->
+
+<div id="carouselExampleIndicators" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./img/105723.jpg" class="d-block w-100" alt="Img 1">
+    </div>
+    <div class="carousel-item">
+      <img src="./img/2147651554.jpg" class="d-block w-100" alt="Img 2">
+    </div>
+    <div class="carousel-item">
+      <img src="./img/vista-superior-personas-que-preparan-podcast_23-2149386540.jpg" class="d-block w-100" alt="Img 3">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 
 
+<!--==============================================-->
+<!--Intro-->
+<!--==============================================-->
+
+
+<section class="w-50 mx-auto text-center pt-5" id="intro">
+  <h1 class="p-3 fs-2 border-top border-3">Una agencia unica para todas tus necesidades de <span class="text-primary"> Marketing Digital </span></h1>
+  <p class="p-3 fs-4 "><span class="text-primary">ExpertDan.</span>es la agencia donde te ayudamos a establecer tu precencia online. SEO, Paginas Web, Tiendas virtuales, Redes sociales</p>
+</section>
+
+<!--==============================================-->
+<!--Servicios-->
+<!--==============================================-->
+
+<section class="container-fluid">
+  <div class="row w-75 mx-auto servicio-fila">
+    <div class="col-lg-6 col-md-12 col-sm-12 d-flex my-5 icono-wrap">
+      <img class="img-thumbnail" src="./img/Desarrollo.png" alt="desarrollo" width="180" height="160">
+      <div>
+        <h3 class="fs-5 mt-4 px-4 pb-1">Desarrollo</h3>
+        <p class="px-4">Desarrollo de aplicaciones Web, moviles y eccomerce</p>
+      </div>
+    </div>
+  
+    <div class="col-lg-6 col-md-12 col-sm-12 d-flex my-5 icono-wrap">
+      <img class="img-thumbnail" src="./img/seo.jpg" alt="seo" width="180" height="160">
+      <div>
+        <h3 class="fs-5 mt-4 px-4 pb-1">Seo</h3>
+        <p class="px-4">Analizamos la eficiencia y optimizamos los sitios WEB</p>
+      </div>
+    </div>
+  </div>
+  <div class="row w-75 mx-auto servicio-fila">
+    <div class="col-lg-6 col-md-12 col-sm-12 d-flex my-5 icono-wrap">
+      <img class="img-thumbnail" src="./img/estrategia-de-branding.png" alt="branding" width="180" height="160">
+      <div>
+        <h3 class="fs-5 mt-4 px-4 pb-1">Branding</h3>
+        <p class="px-4">Diseño, conceptualizacion e implementacion de productos digitales</p>
+      </div>
+    </div>
+  
+    <div class="col-lg-6 col-md-12 col-sm-12 d-flex my-5 icono-wrap">
+      <img class="img-thumbnail" src="./img/comunicaciones.jpg" alt="comunicaciones" width="180" height="160">
+      <div>
+        <h3 class="fs-5 mt-4 px-4 pb-1">Comunicaciones</h3>
+        <p class="px-4">Desarrollo del plan de comunicaciones para sus clientes</p>
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+<!--==============================================-->
+<!--Acerca de nosotros-->
+<!--==============================================-->
+<hr>
+<section class="w-50 m-auto text-center" id="equipo">
+  <div>
+    <h1 mb-5 fs-2>Equipo pequeño con resultados grandes<span></span></h1>
+    <p class="fs-4">Siempre buscamos las personas adecuadas para que trabajen con nostros. Si te sientes listo para este reto, te esperamos para que te unas a nosotros.</p>
+  </div>
+  <div class="mt-5 text-center">
+    <img class="img-thumbnail" src="./img/equipo.png" alt="" width="400" height="380">
+  </div>
+</section>
 
 
 
