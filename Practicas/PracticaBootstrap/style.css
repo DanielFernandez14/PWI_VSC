@@ -18,12 +18,15 @@ body{
 }
 
 @media (max-width: 768px) {
-    #intro{
+    #intro, #equipo{
         width: 90% !important;
     }
     .servicio-fila{
         width: 100% !important;
         text-align: center;
+    }
+    #bg-contacto{
+        top: -110px;
     }
 }
 
@@ -32,4 +35,98 @@ body{
         flex-wrap: wrap;
         justify-content: center !important;
     }
+}
+@media(max-width:1200px){
+    #local{
+        flex-wrap: wrap;
+        padding-top: 30px;
+    }
+    .wrapper{
+        width: 90%;
+        margin: auto;   
+        padding-top:50px;
+    }
+}
+
+@media(min-width:576px){
+    .mapa{
+        width: 100%;
+        margin: auto;
+        padding-top: 50px;
+    }
+}
+@media(min-width:768px){
+    .mapa{   
+        width: 100%;
+        margin: auto;
+        padding-top: 50px;
+    } 
+}
+@media(min-width:992px){
+    .mapa{   
+        width: 100%;
+        margin: auto;
+        padding-top: 50px;
+    } 
+}
+@media(min-width:1200px){
+    .mapa{   
+        width: 100%;
+        margin: auto;
+        padding-top: 50px;
+    } 
+}
+@media(min-width:1400px){
+    .mapa{   
+        width: 100%;
+        margin: auto;
+        padding-top: 50px;
+    } 
+}
+
+
+
+
+#local{
+    background: #f3f3f3;
+    padding-bottom: 300px;
+    display: flex;
+    justify-content: center;
+}
+.wrapper {
+    width: 50%;
+    margin-left: 25%;
+    padding-top: 150px;
+}
+#numeros-local div {
+    padding: 0 20px 0 0;
+    height: 48px;
+}
+#numeros-local div:not(:last-child){
+    border-right: 2px solid #3f3f3f;
+}
+#numeros-local div:not(:first-child){
+    padding-left: 20px;
+}
+#numeros-local p{
+    margin: 0;
+}
+
+#bg-contacto{
+    position: relative;
+    top: -130px;
+}
+#seccion-contacto{
+    background-color: #1b2a4e;
+    min-height: 400px;
+    position: relative;
+}
+#contenedor-formulario{
+    position: absolute;
+    background: #fbfafa;
+    transform: translate(50%, 50%);
+}
+
+#titulo-formulario {
+    color: #3f3f3f;
 }
