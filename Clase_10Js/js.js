@@ -1,5 +1,6 @@
 //COMENTARIOS DE UNA LINEA
 /*COMENTARIOS DE MAS DE UNA LINEA*/
+/* VER TODO EN LA CONSOLA DEL NAVEGADOR */
 
 /* lenguaje de comportamiento, interacciones que podemos hacer con el sitio */
 /* funciones como si fueran "recetas" */
@@ -75,9 +76,14 @@ como parámetro a la llamada. */
 
 //alert("¡Hola Mundo!");
 
-let entrada = prompt("Ingrese una letra");
+
+/* ----------------------------------------------- */
+
+/*let entrada = prompt("Ingrese una letra");
 let salida = entrada + " " + "Ingresada";
-alert(salida);
+alert(salida);*/
+
+/* ----------------------------------------------- */
 
 
 /* Variables: almacenar informacion -> espacio de memoria donde guardar info que utilizamos a lo largo de todo mi documento JS */
@@ -96,3 +102,63 @@ const numero = 1407; /* evita crear mas de un espacio de memoria con el mismo no
 
 
 
+/* OPERACIONES -> Aritmeticas, Logicas, de Comparación */
+
+
+
+/* ----------------------------------------------- */
+//Operadores aritmeticos ->
+/* ----------------------------------------------- */
+console.log(10+33); //devuelve 43
+let resultado=300-11 //calculo matematico de la resta entre los n° y guarda dichos resultados en la variable
+
+console.log(false+22) // si fuera true le suma 1
+console.log("hola" + 2)
+// simbolo + tiene dos usos: suma matematica y concatenacion de strings
+console.log("22" + "2"); //los concatena
+
+
+/* Math-> contiene acciones matematicas mas complejas entre otras */
+console.log(Math.PI)
+
+
+
+/* ----------------------------------------------- */
+//Operadores de Comparacion ->
+/* ----------------------------------------------- */
+//compara datos | valores -> devolver booleano (true o false)
+//Simbolos --> ">" (mayor), "<"(menor), ">="(mayor igual que), "<="(menor igual que), "==="(compara datos, valores y tipo), "=="(compara datos), "!=" (distinto: compara valores, datos), "!=="(distinto: compara valores, datos y su tipo)
+
+console.log(300>10); // mayor que
+console.log(300<10); // menor que
+
+console.log(200<200); //mismos numeros tira false a no ser que sea >=
+console.log(200.1 >= 200);
+console.log(200.1 <= 200);
+
+
+persona="Daniel" //asignando la variable "persona" el valor "Daniel"
+persona=="Daniel"// compara el valor de la variable "persona" con el string "Daniel", compara los datos (no se fija en el tipo)
+console.log(persona == "Daniel") //da true porque compara caracter por caracter
+
+//triple igual === compara tanto el dato como su tipo
+console.log(persona === "Daniel");
+console.log(123123 === "123123");// da false porque es un n° y un string
+
+//distinto a... != (compara valores|datos); !== (compara valor|dato y su tipo)
+
+console.log(persona != "daniel") //true porque "daniel" no es lo mismo que "Daniel"
+console.log("1111" != 2) //true
+console.log(123123 != "123123") //false
+console.log(123123 !== "123123") // true porque tiene el mismo valor pero distinto tipo de dato n° y string
+
+
+
+/* ----------------------------------------------- */
+//metodo -> accion creada por JS para que la utilicemos
+//length -> largo | largo de un string (cantidad de caracteres que tiene)
+//cantidad de items de una lista
+//dato.length -> me devuelve un numero
+
+console.log("daniel".length, "matias".length, "fernandez".length)
+/* ----------------------------------------------- */
