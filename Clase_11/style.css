@@ -1,0 +1,9 @@
+*{
+    margin: 0;
+    font-size: 40px;
+}
+h1{
+    color: red;
+    text-align: center;
+    background-color: aquamarine;
+}
