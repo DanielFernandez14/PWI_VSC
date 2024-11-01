@@ -93,3 +93,99 @@ edad>=16 || vengaConUnAdulto === true ? console.log("Puede comprar una entrada")
 // el signo de pregunta ? (significa "si se cumple hace lo siguiente") y los dos puntos : (significa "sino") dividen las partes de las acciones a realizar
 
 numero1 == "333"? numero1+200 > 330 ? console.log("ok"): console.log("Valor menor a 330"): console.log("La variable numero1 no es igual al string 333")
+
+
+/* -------------------- Funciones Nativas de JS -------------------- */
+//Funciones nativas de JS
+
+// alert("hola"); hasta que no le doy el OK
+
+// prompt("") -> obtener informacion desde el browser (por ahora) | nos devuelve un string
+
+//parseInt() | parseFloat() -> transforma lo que coloquemos entre los parentesis en numeros
+//parseInt -> numero entero
+//parseFloat -> con decimales
+
+
+console.log("333") //valor string
+console.log(parseInt("333")) //number 
+
+
+/* -------------------- Condicionales if/else -> switch -------------------- */
+
+// if / else -> si/sino
+
+/* 
+
+if(condicion){
+accion/es a realizar si se cumple la condicion (condicion me dio true)
+}  else{
+        accion/es a realizar si NO se cumple la condicion (condicion me dio false)
+}
+
+*/
+
+/*if(edad>=16 || vengaConUnAdulto == true){
+    alert("puede comprar las entradas")
+    console.log("acciones para la compra de la entrada")
+} else{
+    alert("no cumple con los requisitos")
+};*/
+
+numero1 == "333"? numero1+200 > 330 ? console.log("ok"): console.log("Valor menor a 330"): console.log("La variable numero1 no es igual al string 333");
+
+if(numero1 == "333"){
+    if(numero1+200 > 300){
+        console.log("ok")    
+    }else{
+        console.log("valor menor a 330")
+    }
+}else{
+    console.log("la variable numero1 no es igual al string 333")
+};
+
+//if-> "desmontable", puedo no agregarle el else y solo ocuparme de un camino unicamente
+
+//variables globales se pueden usar en el codigo en general JS
+//variable locales se usan dentro del if donde la definí
+
+let producto ="lacteos";
+let precioProducto ="100";
+
+if(producto === "lacteos"){
+    //variable local
+    let descuento=precioProducto*0.10
+    precioProducto=precioProducto - descuento; //modificamos el valor de la variable
+    console.log(descuento)//existe la variable local porque se encuentra en su entorno donde se creó
+}
+console.log(precioProducto)
+
+
+
+
+/* Repraso: 
+
+
+Variables: 
+-> espacio de memoria para guardar informacion
+-> pueden ser globales (las puedo usar en todo el archivo JS)
+-> pueden ser locales (solo existen dentro de una estructura, despues no existen mas. No puedo usarlas por fuera de la estructura)
+
+Siempre primero las defino (creo) y luego las puedo utilizar y modificar
+
+
+Operadores:
+->nos permiten hacer acciones aritmeticas de comparacion o logica
+
+
+Condicionales: 
+-> ante una condicion, evaluan si se cumple o no la misma para ver si hace alguna accion u otra.
+-> operador ternario (que si o si tengo que definirle que acciones hacer tanto para cuando se cumple como para cuando no se cumple la operacion; solo permite una accion para cada una)
+
+-> If (evalua si se cumple una condicion para realizar lo que tiene entre las llaves, puedo pedirle que haga varias cosas)
+
+->if/else(evalua si se cumple una funcion para ver si ejecuta lo que esta dentro de las llaves del if: si la condicion se cumple ; o si debe hacer las acciones que definimos dentro de las llaves del else : si la condicion no se cumple)
+
+
+*/
+
