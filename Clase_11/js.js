@@ -161,6 +161,102 @@ if(producto === "lacteos"){
 console.log(precioProducto)
 
 
+/* -------------------- Condicionales Switch -------------------- */
+
+// No evalua si se cumple o no una condicion, es una instruccion que evalua una expresion y posee distintas ejecuciones segun la respuesta a esa evaluación.
+// Para eso evalua cual de los casos presentados coincide con la solución a la expresion indicada en el switch.
+// Una vez que coincide la expresion (valor que le dimos), no sigue con las siguientes, por ejemplo el tipo de usuario si es admin no va a seguir con los siguientes de colaborador o cliente (ejemplo de abajo)
+// switch evalua caso por caso, no evalua si se cumple o no una condicion, sino evalua el valor de un dato
+/* 
+ejemplo: tenemos una expresion que según su valor es lo que va a decir; por ejemplo nota 8, entonces tiene un muy bien, nota 10 entonces tiene un sobresaliente
+ejemplo2: segun el cargo que tiene un usuario, le doy distintos accesos
+*/
+
+
+/*
+Sintaxis: 
+switch (key){
+    case value:
+
+        break;
+
+    default:
+
+        break;    
+}
+*/
+
+//segun el cargo que tiene un usuario, le doy distintos accesos (Qué acceso le doy dependiendo el cargo del usuario)
+let tipoDeUsuario="administrador";
+
+switch(tipoDeUsuario){
+    case "administrador":
+        console.log("puede acceder a todo");
+        alert ("bienvenido administrador");
+        break;
+
+    case "colaborador":
+        console.log("rango de colaborador, acceso limitado");
+        alert ("bienvenido colaborador");
+    break;
+
+    case "cliente":
+        console.log("sua um cliemte");
+        alert ("bienvenido cliente");
+        break;
+    default:
+        console.log("no tiene acceso a nada");
+        alert ("no podes entrar");
+
+    break;
+}
+
+//-------------------------------------------||
+// Alternativas con otros condicionales
+
+
+if (tipoDeUsuario === "administrador"){
+    console.log("puede acceder a todo");
+        alert ("bienvenido administrador");
+}
+if (tipoDeUsuario === "colaborador"){
+    cconsole.log("rango de colaborador, acceso limitado");
+        alert ("bienvenido colaborador");
+}
+if (tipoDeUsuario === "cliente"){
+    console.log("sua um cliemte");
+        alert ("bienvenido cliente");
+}
+if (tipoDeUsuario !== "administrador" && tipoDeUsuario !== "colaborador" && tipoDeUsuario !== "cliente"){
+    console.log("No tenes acceso a na´")
+};
+
+//-------------------------------------------||
+// Alternativas con otros condicionales
+if (tipoDeUsuario !== "administrador" && tipoDeUsuario !== "colaborador" && tipoDeUsuario !== "cliente"){
+    console.log("No tenes acceso a na´")
+} else {
+    if (tipoDeUsuario === "administrador"){
+        console.log("puede acceder a todo");
+            alert ("bienvenido administrador");
+    }
+    if (tipoDeUsuario === "colaborador"){
+        cconsole.log("rango de colaborador, acceso limitado");
+            alert ("bienvenido colaborador");
+    }
+    if (tipoDeUsuario === "cliente"){
+        console.log("sua um cliemte");
+            alert ("bienvenido cliente");
+    }
+}
+
+
+
+
+
+
+
+
 
 
 /* Repraso: 
