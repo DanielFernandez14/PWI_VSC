@@ -28,7 +28,7 @@ total=total+listaRecaudacion[3]
 //el for tradicional tiene tres parametros adentro de los parentesis
 
 for(accion previa al bucle; condicion; accion que realiza al final de cada vuelta){
-    accoon/es que queremos que haga varias veces
+    accion/es que queremos que haga varias veces
 }
 //lo repite hasta que da false, mientras de true sigue en bucle
 */
@@ -41,7 +41,7 @@ for(accion previa al bucle; condicion; accion que realiza al final de cada vuelt
 for(let contador=1;contador<6;contador++){
     console.log("Hola Mundo")
 };
-/* primero creamos un espacio de memoria (una variable) que sea contador=1, despues la condicion que siempre que menor que 6 realice las acciones que tiene adentro (el console.log), y una vez que termines cada vuelta sumes 1 a la variable del inicio; cuando llega al 6 da false */
+/* primero creamos un espacio de memoria (una variable) que sea contador=1, despues la condicion que siempre que sea menor que 6 realice las acciones que tiene adentro (el console.log), y una vez que termines cada vuelta sumes 1 a la variable del inicio; cuando llega al 6 da false */
 
 //prompt? -> funcion nativa de JavaScript, nos sirve por ejemplo para recibir strings del usuario
 console.log("...accciones luego del bucle");
@@ -109,7 +109,7 @@ console.log(total);
 
 /*----------------- Sintaxis -----------------*/
 
-//estructura mas sencilla que el for || lo podemos usar siempre que queramos repetir acciones || mientras la condicion me de verdadero cumplo las acciones dentro de las llaves, caso contrario continua con el resto del codigo
+//estructura mas sencilla que el for || lo podemos usar siempre que queramos repetir acciones || mientras la condicion me de verdadero cumplo las acciones dentro de las llaves, caso contrario continua con el resto del codigo || solo se ocupa de la condicion, no hay que generar ni indicarle una accion final, solo nos ocupamos de la condicion
 
 /* 
 
@@ -122,6 +122,9 @@ while(condicion){
 
 let turno=0
 
+function atenderPersonas() {
+    
+
 while( turno<3 ){
     let edad = prompt("ingrese edad");
     adultoResponsable=prompt("ingrese si o no, en caso de venir acompañado de un adulto")
@@ -131,8 +134,158 @@ while( turno<3 ){
 } else {
     console.log("no cumple con las condiciones para venderle entrada")
 }
-    turno++
-
+    turno++    
 };
+}
 
+let indice = 0;
+while(indice< listaRecaudacion.length){
+    total=total+listaRecaudacion[indice]
+    indice++
+}
+
+/*----------------- Do While -----------------*/
+// Me permite ejecutarlo por lo menos una vez y si la condicion se cumple lo vuelve a repetir y ahi arranca el bucle
+
+/*----------------- Sintaxis -----------------*/
+
+/* 
+    do{
+    accion/es a repetir
+    }while(condicion)
+*/
+
+let nombrePersona="Julia";
+
+do{
+    console.log("Hola Julia!")
+} while(nombrePersona !== "Julia")
+//Ejecuta una vez
+
+
+while(nombrePersona !== "Julia"){
+    console.log("Accion en while tradicional")
+    console.log("Hola Julia!")
+}
+// No ejecuta nunca porque desde un inicio no cumple con la condicion
+
+
+
+
+
+
+
+/*----------------- Ejercicios -----------------*/
+
+//Crear un array de colores (que contenga entre otros colores el color "azul"), y por medio de un bucle hacer que saque el color azul. Mostrar el resultado del array en consola
+
+
+let listaColores = ["rojo", "verde", "naranja", "purpura", "azul", "morado", "violeta"];
+
+const funcionColores=(lista)=>{
+
+    for(color of lista){
+        if(color === "azul"){
+         //saque el azul -> usamos el splice() porque no sabemos en que posicion se ubica dicho color
+        let indiceAzul=lista.indexOf(color)
+        lista.splice(indiceAzul, 1)
+        }   
+    }  
+    console.log(lista)   
+}
+    
+funcionColores(listaColores)
+
+/*  Metodos del array -> array.push(Agrega uno o más elementos al final del array.) || array.pop(Elimina el último elemento del array.) || array.shift(Elimina el primer elemento del array.) || array.unShift(Agrega uno o más elementos al principio del array.) || array.splice(Elimina, agrega o reemplaza elementos en el array, comenzando en un índice dado.) */
+
+
+const funcionColores2=()=>{
+
+    let colorAzul=listaColores.find((color)=>{return color === "azul"});
+
+    if(colorAzul !== undefined){
+        let indiceAzul=lista.indexOf(color);
+        lista.splice(indiceAzul,1)
+    }
+    console.log(listaColores)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------- forEach || map || filter || find -----------------*/
+
+// Metodos propios de JS, todas recorren array
+
+
+/*----------------- Sintaxis -----------------*/
+
+// array.forEach()=> -> funcion que nos permite recorrer un array y ejecutar lo que necesitemos a cada uno de los componentes del mismo. No modifica la lista original.
+
+
+/*----------------- forEach -----------------*/
+
+listaRecaudacion.forEach((recaudacion)=>{
+    recaudacion=recaudacion-10
+    console.log(recaudacion)
+});
+console.log(listaRecaudacion)
+
+
+
+/*----------------- map -----------------*/
+
+let resultado1=listaRecaudacion.map((recaudacion)=>{
+    return recaudacion-10
+})
+console.log(resultado1);
+
+/*----------------- filter -----------------*/
+
+// array.filter(()=>{return condicion}) -> filtrar un array items y envolvermelos en forma de lista. Crea una lista/array nueva y no modifica la original 
+
+let resultado2=listaRecaudacion.filter((items)=>{
+    return items > 1000
+});
+console.log(resultado2);
+
+
+
+let resultado4=listaRecaudacion.filter((item)=>{return item < 300});
+console.log(resultado4);
+// Si no encuentra ningun item de la lista que cumpla con esa condicion nos devuelve un array vacio 
+
+
+
+/*----------------- find -----------------*/
+// array.find((ref)=>{return condicion}) -> nos trae el primer item del array que cumple con una condicion.
+
+let resultado3=listaRecaudacion.find((item)=>{return item > 1000});
+console.log(resultado3);
+
+
+let resultado5=listaRecaudacion.find((item)=>{return item < 300});
+console.log(resultado5);
+// Si no encuentra ningun item de la lista con esa condicion nos devuelve un undefined
+
+
+/*----------------- Tener en cuenta -----------------*/
+
+//for of || forEach() || map() || find() || filter -> son bucles que ejecuto con arrays unicamente
+
+//for tradicional || while || do while -> puedo utilizarlos tanto con arrays como con estructuras a repetir que no involucran arrays
+
+console.log(listaRecaudacion.findIndex((dato)=>{return dato === 555}));
+// El findIndex nos trae el indice del item 
 
