@@ -1,0 +1,53 @@
+/* Estilo base del botón */
+.btn {
+    background-color: #4CAF50;  /* Color de fondo */
+    border: none;               /* Sin bordes */
+    color: white;               /* Color del texto */
+    padding: 15px 32px;         /* Espaciado interno */
+    text-align: center;         /* Alinear el texto al centro */
+    text-decoration: none;      /* Sin subrayado */
+    display: inline-block;      /* Mostrar el botón en línea */
+    font-size: 16px;            /* Tamaño de la fuente */
+    cursor: pointer;           /* El cursor cambia cuando está encima */
+    border-radius: 8px;         /* Bordes redondeados */
+    transition: all 0.3s ease;  /* Transición suave para todos los cambios */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+  }
+  
+  /* Efecto al pasar el ratón (hover) */
+  .btn:hover {
+    background-color: #45a049;  /* Cambio de color al pasar el ratón */
+    transform: scale(1.1);       /* Aumenta el tamaño del botón */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);  /* Sombra más pronunciada */
+  }
+  
+  /* Efecto al hacer clic (active) */
+  .btn:active {
+    background-color: #388e3c;  /* Color más oscuro al hacer clic */
+    transform: scale(0.95);      /* El botón se reduce un poco */
+  }
+  
+  /* Efecto de enfoque (focus) */
+  .btn:focus {
+    outline: none;              /* Elimina el contorno predeterminado */
+    box-shadow: 0 0 8px rgba(72, 166, 76, 0.8);  /* Sombra verde brillante */
+  }
+  
+  /* Animación de pulsación (opcional) */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Efecto de pulsación al pasar el ratón (opcional) */
+  .btn:hover {
+    animation: pulse 1s infinite; /* Pulsación infinita al pasar el ratón */
+  }
+  

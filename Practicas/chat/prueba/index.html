@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encuesta de Satisfacción</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Enlazamos el archivo CSS -->
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Encuesta de Satisfacción</h1>
+      <p>Por favor, tómate unos minutos para responder nuestras preguntas.</p>
+    </header>
+
+    <form action="#" method="post">
+      <!-- Pregunta 1 -->
+      <div class="question">
+        <label for="satisfaccion">¿Cómo calificarías nuestro servicio?</label>
+        <div class="options">
+          <label><input type="radio" name="satisfaccion" value="muy_bien"> Muy bien</label>
+          <label><input type="radio" name="satisfaccion" value="bien"> Bien</label>
+          <label><input type="radio" name="satisfaccion" value="regular"> Regular</label>
+          <label><input type="radio" name="satisfaccion" value="mal"> Mal</label>
+        </div>
+      </div>
+
+      <!-- Pregunta 2 -->
+      <div class="question">
+        <label for="tiempo_respuesta">¿Qué tan rápido fue nuestro servicio de atención?</label>
+        <div class="options">
+          <label><input type="radio" name="tiempo_respuesta" value="muy_rapido"> Muy rápido</label>
+          <label><input type="radio" name="tiempo_respuesta" value="rapido"> Rápido</label>
+          <label><input type="radio" name="tiempo_respuesta" value="lento"> Lento</label>
+          <label><input type="radio" name="tiempo_respuesta" value="muy_lento"> Muy lento</label>
+        </div>
+      </div>
+
+      <!-- Pregunta 3 -->
+      <div class="question">
+        <label for="recomendacion">¿Recomendarías nuestro servicio a otros?</label>
+        <div class="options">
+          <label><input type="radio" name="recomendacion" value="si"> Sí</label>
+          <label><input type="radio" name="recomendacion" value="no"> No</label>
+        </div>
+      </div>
+
+      <!-- Pregunta 4 -->
+      <div class="question">
+        <label for="comentarios">¿Tienes algún comentario adicional?</label>
+        <textarea id="comentarios" name="comentarios" rows="4" placeholder="Escribe aquí tus comentarios..."></textarea>
+      </div>
+
+      <!-- Botón de envío -->
+      <div class="submit">
+        <button type="submit" class="btn">Enviar Encuesta</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
