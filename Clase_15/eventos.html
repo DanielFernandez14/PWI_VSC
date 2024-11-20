@@ -7,13 +7,27 @@
     <link rel="stylesheet" href="stylesEventos.css">
 </head>
 <body>
+
+    <nav>
+        <ul class="menu">
+            <li>Item 1</li>
+            <li onclick="mostrarSubmenu()">Item 2</li>
+        </ul>
+        <ul class="submenu ocultar">
+            <li>subitem 1</li>
+            <li>subitem 2</li>
+        </ul>
+    </nav>
+
     <h1>JavaScript</h1>
     <h2>Eventos</h2>
 
     <h3> Subtitulo hoja secundaria</h3>
     <button>Click!</button>
+    <button class="boton2">Boton2</button>
 
-
+<!-- le ponemos onclick="cambiarColorBoton()" parentesis porque queremos que se ejecute-->
+    <button onclick="cambiarColorBoton(event)" onmouseover="mouseOver1()">Boton 3</button>
 
     <script src="eventos.js"></script>
 </body>
