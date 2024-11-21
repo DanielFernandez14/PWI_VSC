@@ -102,4 +102,3 @@ function mostrarSubmenu() {
 // objeto event -> objeto que viene como respuesta del evento ocurrido donde tenemos la informacion de lo que acaba de ocurrir, con que lo realizo, cuanto tiempo tardo, el nodo en el que se ejecutó. 
 // muestra qué pasó, desde que hacemos el click o pasamos el mouse por arriba, toda la info la muestra, lo podemos ver con un console.dir linea 26
 // palabra reservada que solo existe una vez ocurrido el evento -> event
-//
